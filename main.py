@@ -32,7 +32,7 @@ def select_images_to_reduce_their_size() -> None:
     """
     files = filedialog.askopenfilenames()
     extensions = [file.split(".")[-1] for file in files]
-    if not all([True if extension in ["jpg", "jpeg"] else False for extension in extensions]):
+    if not all([True if extension in ["jpg", "jpeg", "JPG", "JPEG"] else False for extension in extensions]):
         messagebox.showwarning(message="Attention, seuls les fichiers 'JPG' et 'JPEG' sont autorisés !")
     else:
         for idx, file in enumerate(files):
